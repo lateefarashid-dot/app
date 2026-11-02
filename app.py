@@ -239,15 +239,7 @@ def restart():
    st.session_state.quiz_answer = None
    st.session_state.quiz_checked = False
 
-def next_stage():
-st.session_state.stage += 1
-
-
-def restart():
-st.session_state.stage = 0
-st.session_state.decision = None
-st.session_state.quiz_answer = None
-st.session_state.quiz_checked = False
+lse
 
 
 # ==========================================
