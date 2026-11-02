@@ -264,7 +264,7 @@ st.markdown("""
 # ==========================================
 
 if st.session_state.stage == 0:
-st.markdown("""
+   st.markdown("""
 <div class="section-card" style="text-align:center;">
 <div style="font-size:55px;">🌷</div>
 <div style="font-size:26px;font-weight:900;color:#7451A6;">
@@ -286,7 +286,7 @@ st.markdown("""
 st.info("💡 أثناء القصة ستواجهين مواقف تتطلب منك اتخاذ قرارات. اختاري بحكمة!")
 
 if st.button("ابدئي الحكاية 🌸"):
-next_stage()
+   next_stage()
 st.rerun()
 
 
@@ -333,10 +333,8 @@ story = {
 # ==========================================
 
 if st.session_state.stage in [1, 2]:
-
-st.progress(st.session_state.stage / 5)
-
-scene = story[st.session_state.stage]
+   st.progress(st.session_state.stage / 5)
+   scene = story[st.session_state.stage]
 
 st.markdown(f"""
 <div class="section-card">
@@ -348,8 +346,8 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 
 if st.button("متابعة القصة ←"):
-next_stage()
-st.rerun()
+   next_stage()
+   st.rerun()
 
 
 # ==========================================
