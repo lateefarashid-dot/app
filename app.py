@@ -239,8 +239,6 @@ def restart():
    st.session_state.quiz_answer = None
    st.session_state.quiz_checked = False
 
-lse
-
 
 # ==========================================
 # رأس الموقع
