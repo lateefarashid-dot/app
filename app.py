@@ -479,7 +479,7 @@ elif st.session_state.stage == 4:
         <div class="story-text" style="text-align:center;">
             {result}
         </div>
-        <div class="tip">💡 {tip}</div>
+        💡 {tip}
     </div>
     """, unsafe_allow_html=True)
 
