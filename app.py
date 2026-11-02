@@ -264,7 +264,6 @@ st.markdown("""
 # ==========================================
 
 if st.session_state.stage == 0:
-
 st.markdown("""
 <div class="section-card" style="text-align:center;">
 <div style="font-size:55px;">🌷</div>
