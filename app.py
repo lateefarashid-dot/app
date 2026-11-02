@@ -354,10 +354,8 @@ if st.button("متابعة القصة ←"):
 # ==========================================
 
 if st.session_state.stage == 3:
-
-st.progress(3 / 5)
-
-st.markdown("""
+   st.progress(3 / 5)
+   st.markdown("""
 <div class="section-card">
 <div class="scene-number">المشهد الثالث | لحظة الاختيار</div>
 <div class="scene-title">ماذا ستفعلين لو كنتِ مكان مريم؟</div>
@@ -386,11 +384,11 @@ key="decision_radio"
 )
 
 if st.button("تأكيد القرار"):
-if choice is None:
-st.warning("يرجى اختيار أحد القرارات أولاً.")
-else:
-st.session_state.decision = choice
-next_stage()
+   if choice is None:
+      st.warning("يرجى اختيار أحد القرارات أولاً.")
+   else:
+      st.session_state.decision = choice
+      next_stage()
 st.rerun()
 
 
@@ -399,15 +397,13 @@ st.rerun()
 # ==========================================
 
 if st.session_state.stage == 4:
-
-st.progress(4 / 5)
+   st.progress(4 / 5)
 
 decision = st.session_state.decision
 
 if decision == "إعادة إرسال الصورة ومشاركة التعليقات.":
-
-title = "قرار يزيد الألم"
-result = """
+   title = "قرار يزيد الألم"
+   result = """
 إعادة إرسال الصورة تساهم في انتشار الإساءة
 وتضاعف الأذى الذي تتعرض له نور.
 
@@ -464,7 +460,7 @@ st.markdown(f"""
 st.markdown("### وماذا حدث بعد ذلك؟")
 
 if decision == "دعم نور، وعدم نشر الصورة، والإبلاغ عن الإساءة.":
-st.success("""
+   st.success("""
 ساعدت مريم نور على توثيق الإساءة والإبلاغ عنها،
 وطلبتا مساعدة المعلمة.
 
@@ -472,7 +468,7 @@ st.success("""
 من يقف بجانبها.
 """)
 else:
-st.info("""
+   st.info("""
 لاحظت مريم أن الإساءة لم تتوقف،
 فأدركت أن عليها إعادة التفكير في موقفها.
 
@@ -488,7 +484,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 if st.button("اكتشفي نهاية الحكاية ←"):
-next_stage()
+   next_stage()
 st.rerun()
 
 
@@ -497,10 +493,8 @@ st.rerun()
 # ==========================================
 
 if st.session_state.stage == 5:
-
-st.progress(1.0)
-
-st.markdown("""
+   st.progress(1.0)
+   st.markdown("""
 <div class="final-card">
 <div style="font-size:55px;">🌷</div>
 <h2>نهاية الحكاية... وبداية مسؤوليتك</h2>
