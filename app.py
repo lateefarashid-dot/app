@@ -335,8 +335,7 @@ story = {
 if st.session_state.stage in [1, 2]:
    st.progress(st.session_state.stage / 5)
    scene = story[st.session_state.stage]
-
-st.markdown(f"""
+   st.markdown(f"""
 <div class="section-card">
 <div class="scene-number">{scene['number']}</div>
 <div class="scene-title">{scene['title']}</div>
