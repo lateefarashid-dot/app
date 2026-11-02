@@ -415,9 +415,8 @@ tip = "لا تعيدي نشر أي محتوى ينتهك خصوصية الآخر
 icon = "⚠️"
 
 elif decision == "تجاهل الموقف وعدم التدخل.":
-
-title = "الصمت لا يكفي دائماً"
-result = """
+   title = "الصمت لا يكفي دائماً"
+   result = """
 قد لا تكونين مشاركة في الإساءة،
 لكن نور قد تشعر بأنها وحيدة.
 
@@ -429,9 +428,8 @@ tip = "لا تعرضي نفسك للخطر، ولكن لا تتركي المتض
 icon = "💜"
 
 else:
-
-title = "قرار يصنع الفرق"
-result = """
+   title = "قرار يصنع الفرق"
+   result = """
 أحسنتِ! لقد اخترتِ التصرف المسؤول.
 
 دعم نور، وعدم نشر الصورة،
@@ -529,21 +527,18 @@ key="final_quiz"
 )
 
 if st.button("تحققي من إجابتك"):
-
-if answer == "عدم نشره، وتوثيقه، والإبلاغ عنه.":
-st.session_state.quiz_checked = True
-st.success("إجابة صحيحة! أنتِ سفيرة للوعي والأمان الرقمي 🌟")
-st.balloons()
-
-elif answer is not None:
-st.session_state.quiz_checked = False
-st.error("ليست الإجابة الصحيحة. فكري في الطريقة التي تحمي المتضرر وتوقف انتشار الإساءة.")
-
-else:
-st.warning("اختاري إجابة أولاً.")
+   if answer == "عدم نشره، وتوثيقه، والإبلاغ عنه.":
+      st.session_state.quiz_checked = True
+      st.success("إجابة صحيحة! أنتِ سفيرة للوعي والأمان الرقمي 🌟")
+      st.balloons()
+   elif answer is not None:
+      st.session_state.quiz_checked = False
+      st.error("ليست الإجابة الصحيحة. فكري في الطريقة التي تحمي المتضرر وتوقف انتشار الإساءة.")
+   else:
+      st.warning("اختاري إجابة أولاً.")
 
 if st.session_state.quiz_checked:
-st.markdown("""
+   st.markdown("""
 <div class="tip">
 🌟 تذكري دائماً:
 
@@ -558,8 +553,8 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 if st.button("🔄 إعادة الحكاية من البداية"):
-restart()
-st.rerun()
+   restart()
+   st.rerun()
 
 
 # ==========================================
