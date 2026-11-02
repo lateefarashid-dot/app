@@ -239,7 +239,7 @@ if st.session_state.stage == 0:
 </div>
    """, unsafe_allow_html=True)
 st.info("💡 أثناء القصة ستواجهين مواقف تتطلب منك اتخاذ قرارات. اختاري بحكمة!")
-   if st.button("ابدئي الحكاية 🌸"):
+if st.button("ابدئي الحكاية 🌸"):
        next_stage()
        st.rerun()
 
