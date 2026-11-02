@@ -220,18 +220,24 @@ font-size: 19px;
 # إدارة مراحل القصة
 # ==========================================
 
+
 if "stage" not in st.session_state:
-st.session_state.stage = 0
-
+   st.session_state.stage = 0
 if "decision" not in st.session_state:
-st.session_state.decision = None
-
+   st.session_state.decision = None
 if "quiz_answer" not in st.session_state:
-st.session_state.quiz_answer = None
-
+   st.session_state.quiz_answer = None
 if "quiz_checked" not in st.session_state:
-st.session_state.quiz_checked = False
+   st.session_state.quiz_checked = False
 
+def next_stage():
+   st.session_state.stage += 1
+
+def restart():
+   st.session_state.stage = 0
+   st.session_state.decision = None
+   st.session_state.quiz_answer = None
+   st.session_state.quiz_checked = False
 
 def next_stage():
 st.session_state.stage += 1
