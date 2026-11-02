@@ -478,9 +478,9 @@ elif st.session_state.stage == 4:
         </div>
         <div class="story-text" style="text-align:center;">
             {result}
-        </div>
+        
         💡 {tip}
-    </div>
+    
     """, unsafe_allow_html=True)
 
     st.markdown("### وماذا حدث بعد ذلك؟")
